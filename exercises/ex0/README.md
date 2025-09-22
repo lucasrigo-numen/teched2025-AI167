@@ -1,6 +1,6 @@
 # Set Up Your Environment and Configure Access
 To interact with SAP AI Core and use the grounding capability , you first need to create a service key that grants secure access to your AI Core instance. 
-Therefore you need to login into the BTP account [AI167](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63&//detail/862bffe2-c93b-4314-beef-18ccd09393b3/?layout=TwoColumnsMidExpanded-) by using the following username **AI167-xxx@education.cloud.sap** and Password **Adm1nteched25**. 
+Therefore you need to login into the BTP account [AI167](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63&//detail/862bffe2-c93b-4314-beef-18ccd09393b3/?layout=TwoColumnsMidExpanded-) by using the following username **AI167-xxx@education.cloud.sap**. 
 
 **Note**: Please replace xxx with your userid.
 
