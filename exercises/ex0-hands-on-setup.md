@@ -1,5 +1,5 @@
 
-# Getting Started
+# Hands-On Setup
 
 Before you can get started you first need to set-up you workshop environment:
 
@@ -18,15 +18,15 @@ For the hands-on Session we provided seperate [BTP Subaccounts](https://emea.coc
 Please log in with your username and password provided in the workshop room. 
 
 
-<br>![](/exercises/ex0/images/btp_login.png)
+<br>![](/exercises/images/btp_login.png)
 
 Once you successfully logged in, you will be redirected to the BTP Cockpit. To see your subbaccount you need to click on **Account Explorer**.
 
-<br>![](/exercises/ex0/images/account_explorer.png)
+<br>![](/exercises/images/account_explorer.png)
 
 Next click on the tile of your respective subbacount **AI167_XXX**.
 
-<br>![](/exercises/ex0/images/subaccount.png)
+<br>![](/exercises/images/subaccount.png)
 
 ### Download Service Keys 
 
@@ -44,6 +44,10 @@ You now have your service key, which provides URLs and credentials for accessing
 
 ## Step 3: Setup Python Environment
 
+```python
+python3 -m venv ai167env --upgrade-deps
+```
+Activate the virtual environment ```ai167env``` and make sure it is activated.  
 
 
 # Summary
@@ -52,4 +56,4 @@ Now everything is ready to start the excercises.
 
 For the next excercise continue in Visual Code.
 
-Continue to - [Exercise 1 - Get Started with Grounding ](../ex1/ex1-grounding-basics.ipynb)
+Continue to - [Exercise 1 - Get Started with Grounding ](ex1-grounding-basics.ipynb)

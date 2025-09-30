@@ -10,6 +10,9 @@ In the following you will get to know both option, and we start with option 1
 
 ## Excercise 2.1: Provide the chunks of documents via Vector API directly
 
+Vector API is a microservice provided with a Rest API and endpoints for creating and managing collection and documents.
+
+
 In the following we will do the following steps:
 + Prepare the Vector Knowledge Base
     1. Create Collection
@@ -22,6 +25,17 @@ In the following we will do the following steps:
 
 > 🟨 **TODO:**  
 > _Add Excercise with Bruno and Vector API_
+
+ >💡 **Note:**  
+ >_For this exercise we will use Bruno_ 
+
+But before we can start using the Vector API you need to generate an access token, which is required for authenticating API requests. Therefore select the _get_token_ request and execute it. 
+<br>![](images/get_token.png)
+
+### Create a collection
+Collection is a logical container used to store and manage embedded documents. To inser your document chunks into a vector store , you first need to create a collection.
+
+
 
 ## Summary
 
