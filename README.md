@@ -14,6 +14,13 @@ This repository contains the material for the SAP TechEd 2025 session called AI1
 
 In this hands-on session, will learn how to drive your custom AI use cases using document grounding capabilities in the generative AI hub. You can build and test a grounded AI scenario with your custom data using new features like multimodal input and contextualization.
 
+> 📝 **TODO:**  
+> Detailed description on what they will learn._
+Data Management APIs:
+* Pipeline API
+* Vector API
+* Retrieval API
+
 ## Requirements
 
 The requirements to follow the exercises in this repository are...
