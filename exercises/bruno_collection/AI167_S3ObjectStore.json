@@ -1,0 +1,159 @@
+{
+  "name": "AI167_S3ObjectStore",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "S3 - List Objetcs",
+      "filename": "S3 - List Objetcs.bru",
+      "seq": 2,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://{{host}}/{{bucket}}",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "awsv4",
+          "awsv4": {
+            "accessKeyId": "{{access_key_id}}",
+            "secretAccessKey": "{{secret_access_key}}",
+            "sessionToken": "",
+            "service": "s3",
+            "region": "eu-central-1",
+            "profileName": ""
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "S3-Upload",
+      "filename": "S3-Upload.bru",
+      "seq": 1,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://{{bucket}}.{{host}}/<FILENAME>",
+        "method": "PUT",
+        "headers": [
+          {
+            "name": "x-amz-content-sha256",
+            "value": "UNSIGNED-PAYLOAD",
+            "enabled": true
+          },
+          {
+            "name": "Content-Type",
+            "value": "application/pdf",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "file",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": [
+            {
+              "filePath": "",
+              "contentType": "",
+              "selected": true
+            }
+          ]
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "awsv4",
+          "awsv4": {
+            "accessKeyId": "{{access_key_id}}",
+            "secretAccessKey": "{{secret_access_key}}",
+            "sessionToken": "",
+            "service": "s3",
+            "region": "eu-central-1",
+            "profileName": ""
+          }
+        }
+      }
+    }
+  ],
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "host",
+          "value": "s3-eu-central-1.amazonaws.com",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        },
+        {
+          "name": "bucket",
+          "value": "<bucket>",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        },
+        {
+          "name": "region",
+          "value": "eu-central-1",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        },
+        {
+          "name": "username",
+          "value": "<username>",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        },
+        {
+          "name": "access_key_id",
+          "value": "<access_key_id>",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        },
+        {
+          "name": "secret_access_key",
+          "value": "<secret_access_key>",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "S3-env"
+    }
+  ],
+  "brunoConfig": {
+    "version": "1",
+    "name": "AI167_S3ObjectStore",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0010662078857421875,
+    "filesCount": 3
+  }
+}
