@@ -71,6 +71,32 @@ Once you successfully logged in, you will be redirected to the BTP Cockpit. To s
 
 ➡️  Save the file. 
 
+## 1.2 Configure connection details Object Store 
+Last but not least we have to do the same for the Object Store, that we are going to later in this hands-on session.
+The service keys you will get in the BTP cockpit in the respective service instance, as described in the next steps. 
+
+
+➡️ Navigate back again to  **Instances and Subscription** and open this time the  Object Store instance's service key.
+
+<p>
+<img src="images/s3_service_key.png" width="900"/>
+</p>
+
+➡️ Click **Copy Json**
+
+➡️ Return to Visual Studio Code and create a new file ```.objectsStore-config.json```in the ```TECHED2025-AI167``` directory. 
+<p>
+<img src="images/new_file.png" width="900"/>
+</p>
+
+➡️ Paste in the object store service key into ```TECHED2025-AI167/.objectsStore-config.json```, which should look similar to the following.
+<p>
+<img src="images/object_store_config.png" width="900"/>
+</p>
+
+➡️  Save the file. 
+
+
 
 ## 1.3 Create a Python virtual environment and install the SAP Cloud SDK for AI
 ➡️ Start a new Terminal 

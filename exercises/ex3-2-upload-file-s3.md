@@ -23,15 +23,7 @@ For these step we are use again our API Client Bruno (Hope Kasimir is ok with th
 
 The values for the respective key you get from the service key from your Object Store Instance on BTP Cockpit. 
 
-➡️ Go back to the subaccount in the [BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63&//detail/862bffe2-c93b-4314-beef-18ccd09393b3/?layout=TwoColumnsMidExpanded-)
-
-➡️ Navigate to **Instances and Subscriptions** and open the  Object Store instance's service key.
-
-<p>
-<img src="images/s3_service_key.png" width="900"/>
-</p>
-
-➡️ Copy the respective value from the service key into Bruno.
+➡️ Take values from TECHED2025-AI167/.objectStore-config.json and copy the respective value from the service key into Bruno.
 
 ➡️ After you added teh values, select **Save** and then **Activate**
 
