@@ -267,9 +267,7 @@ Response includes all the chunks for the document collection. Additionally, you 
 
 ### Overview of all data repositories
 
-TODO: link missing below?
-
-Next we will use the [Retrieval API]().
+Next we will use the [Retrieval API](https://api.sap.com/api/DOCUMENT_GROUNDING_API/resource/Retrieval).
 The **Retrieval API** lets you retrieve repositories or collections created through the Vector API. 
 
 Let us get an overview on all repositories that are available.
