@@ -84,12 +84,12 @@ The service keys you will get in the BTP cockpit in the respective service insta
 
 ➡️ Click **Copy Json**
 
-➡️ Return to Visual Studio Code and create a new file ```.objectsStore-config.json```in the ```TECHED2025-AI167``` directory. 
+➡️ Return to Visual Studio Code and create a new file ```.objectStore-config.json```in the ```TECHED2025-AI167``` directory.
 <p>
 <img src="images/new_file.png" width="900"/>
 </p>
 
-➡️ Paste in the object store service key into ```TECHED2025-AI167/.objectsStore-config.json```, which should look similar to the following.
+➡️ Paste in the object store service key into ```TECHED2025-AI167/.objectStore-config.json```, which should look similar to the following.
 <p>
 <img src="images/object_store_config.png" width="900"/>
 </p>
