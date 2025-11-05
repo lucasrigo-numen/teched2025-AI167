@@ -14,7 +14,7 @@ Once you opened your Visual Studio Code, you will see the **Welcome** tab. In th
 ```sh
 https://github.com/SAP-samples/teched2025-AI167.git 
 ```
-Paste the URL into the command pallet at the top of the window and press enter. 
+Paste the URL into the command palette at the top of the window and press enter. 
 <p>
 <img src="images/clone_repo.png" alt="Visual Studio Code" width="900"/>
 </p>
@@ -69,7 +69,7 @@ Once you successfully logged in, you will be redirected to the BTP Cockpit. To s
 <img src="images/config_file.png" width="900"/>
 </p>
 
-➡️  Save the file. 
+➡️  Save the file.
 
 ## 1.2 Configure connection details Object Store 
 Last but not least we have to do the same for the Object Store, that we are going to later in this hands-on session.
@@ -84,12 +84,12 @@ The service keys you will get in the BTP cockpit in the respective service insta
 
 ➡️ Click **Copy Json**
 
-➡️ Return to Visual Studio Code and create a new file ```.objectsStore-config.json```in the ```TECHED2025-AI167``` directory. 
+➡️ Return to Visual Studio Code and create a new file ```.objectStore-config.json```in the ```TECHED2025-AI167``` directory.
 <p>
 <img src="images/new_file.png" width="900"/>
 </p>
 
-➡️ Paste in the object store service key into ```TECHED2025-AI167/.objectsStore-config.json```, which should look similar to the following.
+➡️ Paste in the object store service key into ```TECHED2025-AI167/.objectStore-config.json```, which should look similar to the following.
 <p>
 <img src="images/object_store_config.png" width="900"/>
 </p>
@@ -99,19 +99,23 @@ The service keys you will get in the BTP cockpit in the respective service insta
 
 
 ## 1.3 Create a Python virtual environment and install the SAP Cloud SDK for AI
+
 ➡️ Start a new Terminal 
 <p>
 <img src="images/open_terminal.png" width="900"/>
 </p>
 
 ➡️ Create a virtual environment using the following command:
+
 ```python
 python3 -m venv ai167env --upgrade-deps
 ```
-Activate the virtual environment ```ai167env``` like this and make sure it is activated.  
+Activate the virtual environment ```ai167env``` like this and make sure it is activated. 
+
 ```python
 source ai167env/bin/activate
 ```
+
 <p>
 <img src="images/env_active.png" width="900"/>
 </p>
