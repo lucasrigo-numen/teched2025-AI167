@@ -1,0 +1,36 @@
+meta {
+  name: create_collections
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ai_api_url}}{{common_endpoint}}/vector/collections
+  body: json
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "title": "<TITLE>",
+    "embeddingConfig": {
+      "modelName": "text-embedding-3-large"
+    },
+    "metadata": [
+      {
+        "key": "purpose",
+        "value": [
+          "<VALUE>"
+        ]
+      }
+    ]
+  }
+}

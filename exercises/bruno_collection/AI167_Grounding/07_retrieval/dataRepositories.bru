@@ -1,0 +1,19 @@
+meta {
+  name: dataRepositories
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{ai_api_url}}{{common_endpoint}}/retrieval/dataRepositories
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

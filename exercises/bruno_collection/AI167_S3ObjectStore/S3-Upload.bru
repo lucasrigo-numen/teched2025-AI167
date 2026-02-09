@@ -1,0 +1,29 @@
+meta {
+  name: S3-Upload
+  type: http
+  seq: 1
+}
+
+put {
+  url: https://{{bucket}}.{{host}}/<FILENAME>
+  body: file
+  auth: awsv4
+}
+
+headers {
+  x-amz-content-sha256: UNSIGNED-PAYLOAD
+  Content-Type: application/pdf
+}
+
+auth:awsv4 {
+  accessKeyId: {{access_key_id}}
+  secretAccessKey: {{secret_access_key}}
+  sessionToken: 
+  service: s3
+  region: eu-central-1
+  profileName: 
+}
+
+body:file {
+  file: @file()
+}

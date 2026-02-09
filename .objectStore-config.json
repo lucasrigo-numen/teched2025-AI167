@@ -1,0 +1,10 @@
+{
+  "access_key_id": "",
+  "bucket": "hcp-58688453-5554-46bf-aa1f-a92dfa7836f2",
+  "role": "read",
+  "secret_access_key": "",
+  "host": "s3.amazonaws.com",
+  "region": "us-east-1",
+  "uri": "s3://",
+  "username": "hcp-s3-2e1512b9-95ab-4126-8d69-a1073f005073"
+}

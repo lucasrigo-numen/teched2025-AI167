@@ -1,0 +1,19 @@
+meta {
+  name: get_all_pipelines
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ai_api_url}}{{common_endpoint}}/pipelines
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

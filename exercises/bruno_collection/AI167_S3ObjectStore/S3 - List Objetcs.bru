@@ -1,0 +1,20 @@
+meta {
+  name: S3 - List Objetcs
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{host}}/{{bucket}}
+  body: none
+  auth: awsv4
+}
+
+auth:awsv4 {
+  accessKeyId: {{access_key_id}}
+  secretAccessKey: {{secret_access_key}}
+  sessionToken: 
+  service: s3
+  region: eu-central-1
+  profileName: 
+}

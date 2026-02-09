@@ -5,7 +5,7 @@ ROOT_PATH_DIR = os.path.dirname(os.getcwd())
 AICORE_CONFIG_FILENAME = '.aicore-config.json'
 OBJECTSTORE_CONFIG_FILENAME = '.objectStore-config.json'
 OBJECTSTORE_CONFIG_PATH = os.path.join(ROOT_PATH_DIR, OBJECTSTORE_CONFIG_FILENAME)
-RESOURCE_GROUP = "AI167"
+RESOURCE_GROUP = "default" # "AI167"
 
 # If file does not exist, do nothing
 

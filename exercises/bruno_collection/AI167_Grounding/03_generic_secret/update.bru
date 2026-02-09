@@ -1,0 +1,27 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{ai_api_url}}/v2/admin/secrets/canary-rg-secret
+  body: json
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "data": {
+      "clientId": "<CLIENT_ID>"
+    }
+  }
+}

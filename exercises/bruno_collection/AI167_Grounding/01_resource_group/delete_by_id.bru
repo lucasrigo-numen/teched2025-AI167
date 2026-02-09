@@ -1,0 +1,15 @@
+meta {
+  name: delete_by_id
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{ai_api_url}}/v2/admin/resourceGroups/{{resource_group}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

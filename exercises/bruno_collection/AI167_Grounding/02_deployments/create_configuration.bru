@@ -1,0 +1,27 @@
+meta {
+  name: create_configuration
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{ai_api_url}}/v2/lm/configurations
+  body: json
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "name": "orchestration-config",
+    "executableId": "orchestration",
+    "scenarioId": "orchestration"
+  }
+}

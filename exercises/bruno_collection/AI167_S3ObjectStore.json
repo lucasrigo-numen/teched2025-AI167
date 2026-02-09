@@ -30,7 +30,7 @@
             "secretAccessKey": "{{secret_access_key}}",
             "sessionToken": "",
             "service": "s3",
-            "region": "eu-central-1",
+            "region": "{{region}}",
             "profileName": ""
           }
         }
@@ -81,7 +81,7 @@
             "secretAccessKey": "{{secret_access_key}}",
             "sessionToken": "",
             "service": "s3",
-            "region": "eu-central-1",
+            "region": "{{region}}",
             "profileName": ""
           }
         }

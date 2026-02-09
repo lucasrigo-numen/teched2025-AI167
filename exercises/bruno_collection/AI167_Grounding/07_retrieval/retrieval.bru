@@ -1,0 +1,39 @@
+meta {
+  name: retrieval
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{ai_api_url}}{{common_endpoint}}/retrieval/search
+  body: json
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "query": "<QUERY>",
+    "filters": [
+      {
+        "id": "string",
+        "searchConfiguration": {
+          "maxChunkCount": 2
+        },
+        "dataRepositories": [],
+        "dataRepositoryType": "vector",
+        "dataRepositoryMetadata": [],
+        "documentMetadata": [],
+        "chunkMetadata": []
+      }
+    ]
+  }
+}

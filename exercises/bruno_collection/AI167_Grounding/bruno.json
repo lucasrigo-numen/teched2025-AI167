@@ -1,0 +1,11 @@
+{
+  "version": "1",
+  "name": "AI167_Grounding",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0.02450275421142578,
+  "filesCount": 47
+}

@@ -1,0 +1,92 @@
+meta {
+  name: completion_help
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{orchestration_service_url}}/completion
+  body: json
+  auth: bearer
+}
+
+headers {
+  ai-resource-group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "orchestration_config": {
+      "module_configurations": {
+        "grounding_module_config": {
+          "type": "document_grounding_service",
+          "config": {
+            "filters": [
+              {
+                "id": "filter1",
+                "data_repositories": [
+                  "*"
+                ],
+                "search_config": {},
+                "data_repository_type": "help.sap.com"
+              }
+            ],
+            "input_params": [
+              "groundingRequest"
+            ],
+            "output_param": "groundingOutput"
+          }
+        },
+        "llm_module_config": {
+          "model_name": "",
+          "model_params": {},
+          "model_version": "001"
+        },
+        "templating_module_config": {
+          "template": [
+            {
+              "role": "user",
+              "content": "You are a helpful assistant for any queries for SAP Teched 2025.\\nAnswer the grounding request by providing relevant answers that fit to the request. \\n\\nRequest: {{ ?groundingRequest }}\\n\\nReports:{{ ?groundingOutput }}"
+            }
+          ],
+          "defaults": {}
+        },
+        "filtering_module_config": {
+          "input": {
+            "filters": [
+              {
+                "type": "azure_content_safety",
+                "config": {
+                  "Hate": 2,
+                  "SelfHarm": 2,
+                  "Sexual": 2,
+                  "Violence": 2
+                }
+              }
+            ]
+          },
+          "output": {
+            "filters": [
+              {
+                "type": "azure_content_safety",
+                "config": {
+                  "Hate": 2,
+                  "SelfHarm": 2,
+                  "Sexual": 2,
+                  "Violence": 2
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "input_params": {
+      "groundingRequest": "what is joule?"
+    }
+  }
+}

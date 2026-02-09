@@ -24,17 +24,20 @@ def extract_deployment_url():
 
     resp = requests.get(url, headers=headers)
     data = resp.json()
+    print("Deployment URL extraction response data:", data)
     if isinstance(data, dict):
         # data['resources'] -> list of resources
         for key in ("resources", "items"):
             if key in data and isinstance(data[key], list):
                 for r in data[key]:
-                    if isinstance(r, dict) and r.get("deploymentUrl"):
+                    if isinstance(r, dict) and r.get("deploymentUrl") and r.get("id").startswith("d5"):
+                        print("Found deployment URL:", r["deploymentUrl"])
                         return r["deploymentUrl"]
         if data.get("deploymentUrl"):
             return data["deploymentUrl"]
     if isinstance(data, list):
         for it in data:
-            if isinstance(it, dict) and it.get("deploymentUrl"):
+            if isinstance(it, dict) and it.get("deploymentUrl") and it.get("id").startswith("d5"):
+                print("Found deployment URL:", it.get("deploymentUrl"))
                 return it["deploymentUrl"]
     raise KeyError("deploymentUrl not found")

@@ -1,0 +1,19 @@
+meta {
+  name: delete
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{ai_api_url}}/v2/admin/secrets/canary-rg1-secret
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

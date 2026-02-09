@@ -1,0 +1,37 @@
+meta {
+  name: create_pipeline
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{ai_api_url}}{{common_endpoint}}/pipelines
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "type": "",
+    "configuration": {
+      "destination": "",
+      "sharePoint": {
+        "site": {
+          "name": "",
+          "includePaths": [
+            ""
+          ]
+        }
+      }
+    }
+  }
+}

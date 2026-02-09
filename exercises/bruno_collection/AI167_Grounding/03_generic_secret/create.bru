@@ -1,0 +1,45 @@
+meta {
+  name: create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{ai_api_url}}/v2/admin/secrets
+  body: json
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "name": "canary-rg1-secret",
+    "data": {
+      "type": "SFRUUA==",
+      "description": "<>DESCRIPTION",
+      "clientId": "<>CLIENT_ID",
+      "authentication": "<AUTHENTICATION>",
+      "tokenServiceURL": "<TOKENSERVICEURL>",
+      "password": "<PSWD>",
+      "proxyType": "<PROXY>",
+      "url": "<url>",
+      "tokenServiceURLType": "<TOKENSERVICEURLTYPE>",
+      "user": "<USER>",
+      "clientSecret": "<CLIENTSECRET>",
+      "scope": "<SCOPE>"
+    },
+    "labels": [
+      {
+        "key": "ext.ai.sap.com/document-grounding",
+        "value": "true"
+      }
+    ]
+  }
+}

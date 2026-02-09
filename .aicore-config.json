@@ -1,0 +1,12 @@
+{
+  "serviceurls": {
+    "AI_API_URL": "https://api.ai.prod.us-east-1.aws.ml.hana.ondemand.com"
+  },
+  "appname": "220f2a26-c480-484a-90df-6469ba1365a0!b570088|aicore!b164",
+  "clientid": "sb-220f2a26-c480-484a-90df-6469ba1365a0!b570088|aicore!b164",
+  "clientsecret": "aa5501ce-bbdf-4eca-8e94-90dda63b72d8$6E8Jx2eZh7AH2fT8uMGbQXvdpZjT5CQ12HVFRJqOy74=",
+  "identityzone": "sap-btp-experience-2026-shared-sb-x94grxn8",
+  "identityzoneid": "9dd54f49-c102-49a0-86de-389bc6100f91",
+  "url": "https://sap-btp-experience-2026-shared-sb-x94grxn8.authentication.us10.hana.ondemand.com",
+  "credential-type": "binding-secret"
+}

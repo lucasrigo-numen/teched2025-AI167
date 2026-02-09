@@ -1,0 +1,19 @@
+meta {
+  name: delete_collection_by_id
+  type: http
+  seq: 12
+}
+
+delete {
+  url: {{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

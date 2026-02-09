@@ -1,0 +1,19 @@
+meta {
+  name: get_all copy
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{ai_api_url}}/v2/admin/secrets
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

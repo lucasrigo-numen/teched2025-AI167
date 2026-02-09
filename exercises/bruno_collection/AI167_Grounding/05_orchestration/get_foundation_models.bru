@@ -1,0 +1,19 @@
+meta {
+  name: get_foundation_models
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ai_api_url}}/v2/lm/scenarios/foundation-models/models
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

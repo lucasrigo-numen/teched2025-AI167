@@ -1,0 +1,19 @@
+meta {
+  name: get_collection_creation_status_by_id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/creationStatus
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

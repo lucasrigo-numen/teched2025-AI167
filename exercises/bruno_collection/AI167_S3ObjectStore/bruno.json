@@ -1,0 +1,11 @@
+{
+  "version": "1",
+  "name": "AI167_S3ObjectStore",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0.0010662078857421875,
+  "filesCount": 3
+}

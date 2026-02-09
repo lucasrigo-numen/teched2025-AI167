@@ -1,0 +1,26 @@
+meta {
+  name: get_deployment
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{ai_api_url}}/v2/lm/deployments
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "ttl": "24H",
+    "configurationId": "<CONFIGURATION_ID>"
+  }
+}

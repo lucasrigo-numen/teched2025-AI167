@@ -1,0 +1,94 @@
+meta {
+  name: completion
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{orchestration_service_url}}/completion
+  body: json
+  auth: bearer
+}
+
+headers {
+  ai-resource-group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "orchestration_config": {
+      "module_configurations": {
+        "grounding_module_config": {
+          "type": "document_grounding_service",
+          "config": {
+            "filters": [
+              {
+                "id": "filter1",
+                "data_repositories": [
+                  "*"
+                ],
+                "search_config": {
+                  "max_chunk_count": 10
+                },
+                "data_repository_type": "vector"
+              }
+            ],
+            "input_params": [
+              "groundingRequest"
+            ],
+            "output_param": "groundingOutput"
+          }
+        },
+        "llm_module_config": {
+          "model_name": "",
+          "model_params": {},
+          "model_version": "latest"
+        },
+        "templating_module_config": {
+          "template": [
+            {
+              "role": "user",
+              "content": ""
+            }
+          ],
+          "defaults": {}
+        },
+        "filtering_module_config": {
+          "input": {
+            "filters": [
+              {
+                "type": "azure_content_safety",
+                "config": {
+                  "Hate": 2,
+                  "SelfHarm": 2,
+                  "Sexual": 2,
+                  "Violence": 2
+                }
+              }
+            ]
+          },
+          "output": {
+            "filters": [
+              {
+                "type": "azure_content_safety",
+                "config": {
+                  "Hate": 2,
+                  "SelfHarm": 2,
+                  "Sexual": 2,
+                  "Violence": 2
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "input_params": {
+      "groundingRequest": ""
+    }
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: get_all_collections
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{ai_api_url}}{{common_endpoint}}/vector/collections
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

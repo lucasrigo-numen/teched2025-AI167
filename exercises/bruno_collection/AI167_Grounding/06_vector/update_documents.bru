@@ -1,0 +1,48 @@
+meta {
+  name: update_documents
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/documents
+  body: json
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: {{resource_group}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "id": "<DOCUMENT_ID>",
+        "metadata": [
+          {
+            "key": "anykey",
+            "value": ["anyvalue"]
+          }
+        ],
+        "chunks": [
+          {
+            "content": "",
+            "metadata": [
+              {
+                "key": "index",
+                "value": [
+                  "1"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
