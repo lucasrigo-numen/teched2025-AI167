@@ -2,18 +2,18 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session called AI167 - Ground your AI in business context: A hands-on with document grounding.  
+This repository contains the material for the SAP TechEd 2025 session called AI167 - Ground your AI in business context: A hands-on with document grounding.
 
 ## Overview
 
 In this hands-on session, we will explore how to make Large Language Models truly enterprise-ready by grounding them with your own business data using Grounding in SAP GenAI Hub.
-Throughout this lab, you will learn how to:   
+Throughout this lab, you will learn how to:
 
-- Build and manage data repositories for grounding.  
-- Create embeddings using the Vector API.  
-- Process full documents using the Pipeline API.  
-- Retrieve relevant context with the Retrieval API.  
-- Apply grounding end-to-end using the Orchestration layer in SAP GenAI Hub.  
+- Build and manage data repositories for grounding.
+- Create embeddings using the Vector API.
+- Process full documents using the Pipeline API.
+- Retrieve relevant context with the Retrieval API.
+- Apply grounding end-to-end using the Orchestration layer in SAP GenAI Hub.
 
 By the end of this session, you will have hands-on experience turning an LLM from a general-purpose assistant into a trusted, context-aware enterprise AI system that answers based on your data — not guesses.
 So get ready — this is where ideas get real.
@@ -22,7 +22,9 @@ So get ready — this is where ideas get real.
 
 The requirements to follow the exercises in this repository are:
 - Visual Code Studio
-- Bruno 
+- Bruno
+
+If  you don't have them, follow the [Pre-requisites installation ](exercises/prereq-installation.md)
 
 
 ## Exercises
